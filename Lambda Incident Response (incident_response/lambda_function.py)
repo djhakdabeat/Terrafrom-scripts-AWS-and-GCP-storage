@@ -1,0 +1,13 @@
+import boto3
+
+def lambda_handler(event, context):
+    s3 = boto3.client('s3')
+    bucket_name = "my-secure-data-lake"
+    # Example: Revert bucket policy if changed
+    # In practice, fetch and compare policies, then revert if needed
+    # For demo, assume known good policy stored locally
+    with open('policy.json', 'r') as f:
+        good_policy = f.read()
+    s3.put_bucket_policy(Bucket=bucket_name, Policy=good_policy)
+    # Send notification (SNS, email, etc.)
+    print("Reverted bucket policy to compliant state.")
