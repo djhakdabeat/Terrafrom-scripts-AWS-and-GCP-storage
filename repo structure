@@ -1,0 +1,20 @@
+multi-cloud-security-solution/
+│
+├── infra/
+│   ├── aws/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   ├── gcp/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   └── README.md
+│
+├── cicd/
+│   ├── github-workflow.yml
+│   └── README.md
+│
+├── incident_response/
+│   ├── lambda_function.py
+│   └── README.md
+│
+└── README.md
